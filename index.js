@@ -1,7 +1,7 @@
 /*!
  * Node.JS module "Deep Extend" for recursive object extending.
  * @author Viacheslav Lotsmanov lotsmanov89 at gmail dot com
- * @version 0.1
+ * @version 0.2
  */
 
 /**
@@ -40,6 +40,12 @@ var deepExtend = function (/*obj_1, [obj_2], [obj_N]*/) {
 					
 					if (typeof val !== 'object') {
 						target[key] = val;
+						continue;
+					}
+					
+					if (typeof src !== 'object') {
+						clone = (Array.isArray(val)) ? [] : {};
+						target[key] = deepExtend(clone, val);
 						continue;
 					}
 					
