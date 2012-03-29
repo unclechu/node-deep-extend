@@ -1,16 +1,16 @@
 /*!
- * Node.JS module "Deep Extend" for recursive object extending.
- * @author Viacheslav Lotsmanov lotsmanov89 at gmail dot com
- * @version 0.2
+ * Node.JS module "Deep Extend"
+ * @decription Recursive object extending.
+ * @author Viacheslav Lotsmanov (unclechu)
  */
 
 /**
  * Extening object that entered in first argument.
  * Returns extended object or false if have no target object or incorrect type.
  * If you wish to clone object, simply use that:
- *   deepExtend({}, yourObj_1, [yourObj_N]) - first arg is new empty object
+ *  deepExtend({}, yourObj_1, [yourObj_N]) - first arg is new empty object
  */
-var deepExtend = function (/*obj_1, [obj_2], [obj_N]*/) {
+module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {
 	var target, key, val, src, clone, args = [], i = 1;
 	
 	if (arguments.length < 1 || typeof arguments[0] !== 'object') {
@@ -63,5 +63,3 @@ var deepExtend = function (/*obj_1, [obj_2], [obj_N]*/) {
 	
 	return target;
 }
-
-module.exports = deepExtend;

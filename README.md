@@ -1,12 +1,21 @@
 Node.JS module "Deep Extend"
 ============================
 
-For recursive object extending.
+Recursive object extending.
+
+Version
+-----
+0.2.1
+
+Install
+-----
+
+	npm install deep-extend
 
 Usage
 -----
 
-	var deepExtend = require('node-deep-extend'),
+	var deepExtend = require('deep-extend'),
 		obj1 = {
 			a: 1,
 			b: 2,
