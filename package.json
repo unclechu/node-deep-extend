@@ -1,7 +1,7 @@
 {
 	"name": "deep-extend"
 	,"description": "Recursive object extending."
-	,"version": "0.2.1"
+	,"version": "0.2.2"
 	,"homepage": "https://github.com/unclechu/node-deep-extend"
 	,"repository": {
 		"type": "git"
