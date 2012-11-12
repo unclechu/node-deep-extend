@@ -11,17 +11,16 @@
  *  deepExtend({}, yourObj_1, [yourObj_N]) - first arg is new empty object
  */
 module.exports = deepExtend = function (/*obj_1, [obj_2], [obj_N]*/) {
-    var target, key, val, src, clone, args = [], i = 1;
-    
     if (arguments.length < 1 || typeof arguments[0] !== 'object') {
         return false;
     }
     
-    target = arguments[0];
+    var target = arguments[0];
     
-    for (; i < arguments.length; i++) {
-        args.push(arguments[i]);
-    }
+	// convert arguments to array and cut off target object
+	var args = Array.prototype.slice.call(arguments, 1);
+	
+	var key, val, src, clone;
     
     if (args.length > 0) {
         args.forEach(function (obj) {
