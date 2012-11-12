@@ -5,7 +5,7 @@ Recursive object extending.
 
 Version
 -----
-0.2.3
+0.2.4
 
 Install
 -----
@@ -36,14 +36,14 @@ Usage
         e: { one: 1, two: 2 },
         f: []
     };
-    
+
     deepExtend(obj1, obj2);
-    
+
     console.log(obj1);
     /*
         { a: 1,
           b: 3,
-          d: 
+          d:
            { a: 1,
              b: { first: 'one', second: 'two' },
              c: { test1: 123, test2: 222 } },
