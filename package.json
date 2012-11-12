@@ -1,15 +1,15 @@
 {
-	"name": "deep-extend"
-	,"description": "Recursive object extending."
-	,"version": "0.2.2"
-	,"homepage": "https://github.com/unclechu/node-deep-extend"
-	,"repository": {
-		"type": "git"
-		,"url": "git://github.com/unclechu/node-deep-extend.git"
-	}
-	,"author": "Viacheslav Lotsmanov <lotsmanov89@gmail.com>"
-	,"main": "index"
-	,"engines": {
-		"node": ">=0.4"
-	}
+    "name": "deep-extend"
+    ,"description": "Recursive object extending."
+    ,"version": "0.2.3"
+    ,"homepage": "https://github.com/unclechu/node-deep-extend"
+    ,"repository": {
+        "type": "git"
+        ,"url": "git://github.com/unclechu/node-deep-extend.git"
+    }
+    ,"author": "Viacheslav Lotsmanov <lotsmanov89@gmail.com>"
+    ,"main": "index"
+    ,"engines": {
+        "node": ">=0.4"
+    }
 }
