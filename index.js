@@ -1,5 +1,6 @@
 /*!
  * Node.JS module "Deep Extend"
+ * @version 0.2.5
  * @description Recursive object extending.
  * @author Viacheslav Lotsmanov (unclechu)
  */
