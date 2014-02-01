@@ -62,7 +62,7 @@ var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {
                 continue;
             }
 
-            if (typeof src !== 'object') {
+            if (typeof src !== 'object' || src === null) {
                 clone = (Array.isArray(val)) ? [] : {};
                 target[key] = deepExtend(clone, val);
                 continue;
