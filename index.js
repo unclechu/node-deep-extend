@@ -1,7 +1,6 @@
 /*!
  * Node.JS module "Deep Extend"
  * @description Recursive object extending.
- * @version 0.2.6
  * @author Viacheslav Lotsmanov (unclechu) <lotsmanov89@gmail.com>
  * @license MIT
  *
@@ -51,31 +50,31 @@ var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {
         if (typeof obj !== 'object') return;
 
         for (key in obj) {
-            if (obj[key] !== void 0) {
-                src = target[key];
-                val = obj[key];
+            if ( ! (key in obj)) continue;
 
-                if (val === target) continue;
+            src = target[key];
+            val = obj[key];
 
-                if (typeof val !== 'object' || val === null) {
-                    target[key] = val;
-                    continue;
-                }
+            if (val === target) continue;
 
-                if (typeof src !== 'object') {
-                    clone = (Array.isArray(val)) ? [] : {};
-                    target[key] = deepExtend(clone, val);
-                    continue;
-                }
-
-                if (Array.isArray(val)) {
-                    clone = (Array.isArray(src)) ? src : [];
-                } else {
-                    clone = (!Array.isArray(src)) ? src : {};
-                }
-
-                target[key] = deepExtend(clone, val);
+            if (typeof val !== 'object' || val === null) {
+                target[key] = val;
+                continue;
             }
+
+            if (typeof src !== 'object') {
+                clone = (Array.isArray(val)) ? [] : {};
+                target[key] = deepExtend(clone, val);
+                continue;
+            }
+
+            if (Array.isArray(val)) {
+                clone = (Array.isArray(src)) ? src : [];
+            } else {
+                clone = (!Array.isArray(src)) ? src : {};
+            }
+
+            target[key] = deepExtend(clone, val);
         }
     });
 
