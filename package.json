@@ -8,7 +8,7 @@
         "type": "git",
         "url": "git://github.com/unclechu/node-deep-extend.git"
     },
-    "author": "Viacheslav Lotsmanov <lotsmanov89@gmail.com>",
+    "author": "Viacheslav Lotsmanov (unclechu) <lotsmanov89@gmail.com>",
     "main": "index",
     "engines": {
         "node": ">=0.4"
