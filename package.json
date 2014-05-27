@@ -30,6 +30,6 @@
     "should": "~3.3.2"
   },
   "directories": {
-	  { "test": "./test" }
+	  "test": "./test"
   }
 }
