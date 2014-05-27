@@ -44,7 +44,7 @@ var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {
     // convert arguments to array and cut off target object
     var args = Array.prototype.slice.call(arguments, 1);
 
-    var key, val, src, clone;
+    var key, val, src, clone, tmpBuf;
 
     args.forEach(function (obj) {
         if (typeof obj !== 'object') return;
@@ -57,8 +57,13 @@ var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {
 
             if (val === target) continue;
 
-            if (typeof val !== 'object' || val === null || val instanceof Buffer) {
+            if (typeof val !== 'object' || val === null) {
                 target[key] = val;
+                continue;
+            } else if (val instanceof Buffer) {
+                tmpBuf = new Buffer(val.length);
+                val.copy(tmpBuf);
+                target[key] = tmpBuf;
                 continue;
             }
 

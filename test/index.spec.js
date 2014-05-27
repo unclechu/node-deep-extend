@@ -37,6 +37,7 @@ describe('deep-extend', function() {
     var b = { value: new Buffer('foo') };
     extend(a, b);
     a.value.write('bar');
+    a.value.toString().should.eql('bar');
     b.value.toString().should.eql('foo');
   });
 
