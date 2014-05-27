@@ -32,4 +32,12 @@ describe('deep-extend', function() {
     });
   });
 
+  it('Buffer is cloned', function () {
+    var a = { };
+    var b = { value: new Buffer('foo') };
+    extend(a, b);
+    a.value.write('bar');
+    b.value.toString().should.eql('foo');
+  });
+
 });
