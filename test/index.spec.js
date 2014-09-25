@@ -60,7 +60,7 @@ describe('deep-extend', function() {
 		b.d.should.instanceOf(RegExp);
 	});
 
-	it('Date object is cloned', function () {
+	it('RegExp object is cloned', function () {
 		var a = { d: new RegExp('b', 'g') };
 		var b = extend({}, a);
 		b.d.test('abc');
