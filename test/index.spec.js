@@ -54,4 +54,17 @@ describe('deep-extend', function() {
 		b.d.getTime().should.not.eql( a.d.getTime() );
 	});
 
+	it('RegExp objects', function () {
+		var a = { d: new RegExp() };
+		var b = extend({}, a);
+		b.d.should.instanceOf(RegExp);
+	});
+
+	it('RegExp object is cloned', function () {
+		var a = { d: new RegExp('b', 'g') };
+		var b = extend({}, a);
+		b.d.test('abc');
+		b.d.lastIndex.should.not.eql( a.d.lastIndex );
+	});
+
 });

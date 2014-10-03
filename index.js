@@ -68,6 +68,9 @@ var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {
 			} else if (val instanceof Date) {
 				target[key] = new Date(val.getTime());
 				continue;
+			} else if (val instanceof RegExp) {
+				target[key] = new RegExp(val);
+				continue;
 			}
 
 			if (typeof src !== 'object' || src === null) {
