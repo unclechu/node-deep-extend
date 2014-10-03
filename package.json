@@ -2,8 +2,18 @@
   "name": "deep-extend",
   "description": "Recursive object extending.",
   "license": "MIT",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/unclechu/node-deep-extend",
+  "tags": [
+    "deep-extend",
+    "extend",
+    "deep",
+    "recursive",
+    "xtend",
+    "clone",
+    "merge",
+    "json"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/unclechu/node-deep-extend.git"
