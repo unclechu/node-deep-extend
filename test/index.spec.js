@@ -78,4 +78,51 @@ describe('deep-extend', function () {
 		c.should.eql({c: 3});
 	});
 
+	it('example from README.md', function () {
+		var obj1 = {
+			a: 1,
+			b: 2,
+			d: {
+				a: 1,
+				b: [],
+				c: { test1: 123, test2: 321 }
+			},
+			f: 5,
+			g: 123
+		};
+		var obj2 = {
+			b: 3,
+			c: 5,
+			d: {
+				b: { first: 'one', second: 'two' },
+				c: { test2: 222 }
+			},
+			e: { one: 1, two: 2 },
+			f: [],
+			g: (void 0),
+			h: /abc/g,
+			f: null
+		};
+
+		extend(obj1, obj2);
+
+		obj1.should.eql({
+			a: 1,
+			b: 3,
+			d: {
+				a: 1,
+				b: { first: 'one', second: 'two' },
+				c: { test1: 123, test2: 222 }
+			},
+			f: null,
+			g: undefined,
+			c: 5,
+			e: { one: 1, two: 2 },
+			h: /abc/g
+		});
+
+		('g' in obj1).should.eql(true);
+		('x' in obj1).should.eql(false);
+	});
+
 });
