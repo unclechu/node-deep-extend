@@ -50,8 +50,6 @@ var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {
 		if (typeof obj !== 'object') return;
 
 		for (key in obj) {
-			if ( ! (key in obj)) continue;
-
 			src = target[key];
 			val = obj[key];
 
