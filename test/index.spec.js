@@ -1,9 +1,9 @@
 var should = require('should');
 var extend = require('../index');
 
-describe('deep-extend', function() {
+describe('deep-extend', function () {
 
-	it('can extend on 1 level', function() {
+	it('can extend on 1 level', function () {
 		var a = { hello: 1 };
 		var b = { world: 2 };
 		extend(a, b);
@@ -13,7 +13,7 @@ describe('deep-extend', function() {
 		});
 	});
 
-	it('can extend on 2 levels', function() {
+	it('can extend on 2 levels', function () {
 		var a = { person: { name: 'John' } };
 		var b = { person: { age: 30 } };
 		extend(a, b);
@@ -22,7 +22,7 @@ describe('deep-extend', function() {
 		});
 	});
 
-	it('can extend with Buffer values', function() {
+	it('can extend with Buffer values', function () {
 		var a = { hello: 1 };
 		var b = { value: new Buffer('world') };
 		extend(a, b);
@@ -65,6 +65,17 @@ describe('deep-extend', function() {
 		var b = extend({}, a);
 		b.d.test('abc');
 		b.d.lastIndex.should.not.eql( a.d.lastIndex );
+	});
+
+	it('doesn\'t change sources', function () {
+		var a = {a: [1]};
+		var b = {a: [2]};
+		var c = {c: 3};
+		var d = extend({}, a, b, c);
+
+		a.should.eql({a: [1]});
+		b.should.eql({a: [2]});
+		c.should.eql({c: 3});
 	});
 
 });

@@ -34,14 +34,15 @@
   ],
   "main": "index",
   "engines": {
-    "node": ">=0.4"
+    "node": ">=0.4",
+    "iojs": ">=1"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
   "devDependencies": {
-    "mocha": "~1.19.0",
-    "should": "~3.3.2"
+    "mocha": "^2.2.1",
+    "should": "^5.2.0"
   },
   "directories": {
     "test": "./test"
