@@ -1,3 +1,5 @@
+'use strict';
+
 var should = require('should');
 var extend = require('../index');
 
@@ -88,7 +90,8 @@ describe('deep-extend', function () {
 				c: { test1: 123, test2: 321 }
 			},
 			f: 5,
-			g: 123
+			g: 123,
+			i: 321
 		};
 		var obj2 = {
 			b: 3,
@@ -101,7 +104,7 @@ describe('deep-extend', function () {
 			f: [],
 			g: (void 0),
 			h: /abc/g,
-			f: null
+			i: null
 		};
 
 		extend(obj1, obj2);
@@ -114,11 +117,12 @@ describe('deep-extend', function () {
 				b: { first: 'one', second: 'two' },
 				c: { test1: 123, test2: 222 }
 			},
-			f: null,
+			f: [],
 			g: undefined,
 			c: 5,
 			e: { one: 1, two: 2 },
-			h: /abc/g
+			h: /abc/g,
+			i: null
 		});
 
 		('g' in obj1).should.eql(true);

@@ -1,12 +1,11 @@
 /*!
- * Node.JS module "Deep Extend"
- * @description Recursive object extending.
- * @author Viacheslav Lotsmanov (unclechu) <lotsmanov89@gmail.com>
+ * @description Recursive object extending
+ * @author Viacheslav Lotsmanov <lotsmanov89@gmail.com>
  * @license MIT
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2013 Viacheslav Lotsmanov
+ * Copyright (c) 2013-2015 Viacheslav Lotsmanov
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -25,6 +24,8 @@
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+
+'use strict';
 
 /**
  * Extening object that entered in first argument.
