@@ -1,8 +1,8 @@
 {
   "name": "deep-extend",
-  "description": "Recursive object extending.",
+  "description": "Recursive object extending",
   "license": "MIT",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "homepage": "https://github.com/unclechu/node-deep-extend",
   "keywords": [
     "deep-extend",
@@ -36,10 +36,10 @@
       "url": "https://github.com/maxmaximov"
     }
   ],
-  "main": "index",
+  "main": "lib/deep-extend.js",
   "engines": {
-    "node": ">=0.4",
-    "iojs": ">=1"
+    "node": ">=0.4.0",
+    "iojs": ">=1.0.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha"
@@ -49,9 +49,11 @@
     "should": "^5.2.0"
   },
   "directories": {
+    "lib": "./lib/",
     "test": "./test/"
   },
   "files": [
+    "lib/deep-extend.js",
     "test/index.spec.js",
     "test/mocha.opts",
     "index.js",

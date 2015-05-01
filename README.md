@@ -7,13 +7,16 @@ Recursive object extending.
 [![NPM](https://nodei.co/npm-dl/deep-extend.png?height=3)](https://nodei.co/npm/deep-extend/)
 
 Install
------
+-------
 
-	npm install deep-extend
+```bash
+	$ npm install deep-extend
+```
 
 Usage
 -----
 
+```javascript
 	var deepExtend = require('deep-extend');
 	var obj1 = {
 		a: 1,
@@ -25,7 +28,8 @@ Usage
 		},
 		f: 5,
 		g: 123,
-		i: 321
+		i: 321,
+		j: [1, 2]
 	};
 	var obj2 = {
 		b: 3,
@@ -38,7 +42,8 @@ Usage
 		f: [],
 		g: (void 0),
 		h: /abc/g,
-		i: null
+		i: null,
+		j: [3, 4]
 	};
 
 	deepExtend(obj1, obj2);
@@ -56,5 +61,29 @@ Usage
 	  c: 5,
 	  e: { one: 1, two: 2 },
 	  h: /abc/g,
-	  i: null }
+	  i: null,
+	  j: [3, 4] }
 	*/
+```
+
+Unit testing
+------------
+
+```bash
+	$ npm test
+```
+
+Changelog
+---------
+
+[CHANGELOG.md](./CHANGELOG.md)
+
+Any issues?
+-----------
+
+Please, report about issues [here](https://github.com/unclechu/node-deep-extend/issues).
+
+License
+-------
+
+[MIT](./LICENSE)
