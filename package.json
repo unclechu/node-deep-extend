@@ -54,10 +54,6 @@
   },
   "files": [
     "lib/deep-extend.js",
-    "test/index.spec.js",
-    "test/mocha.opts",
-    "index.js",
-    "LICENSE",
-    "README.md"
+    "index.js"
   ]
 }
