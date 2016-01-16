@@ -1,6 +1,12 @@
 Changelog
 =========
 
+v0.4.1
+------
+
+- Removed test code from <b>npm</b> package
+  ([see pull request #21](https://github.com/unclechu/node-deep-extend/pull/21)).
+
 v0.4.0
 ------
 
