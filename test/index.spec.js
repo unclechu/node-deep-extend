@@ -14,6 +14,15 @@ describe('deep-extend', function () {
 		});
 	});
 
+	it('should ignore null', function () {
+		var a = { hello: 1 };
+		var b = null;
+		extend(a, b);
+		a.should.eql({
+			hello: 1
+		});
+	});
+
 	it('can extend on 1 level', function () {
 		var a = { hello: 1 };
 		var b = { world: 2 };
@@ -44,7 +53,7 @@ describe('deep-extend', function () {
 	});
 
 	it('Buffer is cloned', function () {
-		var a = { };
+		var a = {};
 		var b = { value: new Buffer('foo') };
 		extend(a, b);
 		a.value.write('bar');
@@ -61,8 +70,8 @@ describe('deep-extend', function () {
 	it('Date object is cloned', function () {
 		var a = { d: new Date() };
 		var b = extend({}, a);
-		b.d.setTime( (new Date()).getTime() + 100000 );
-		b.d.getTime().should.not.eql( a.d.getTime() );
+		b.d.setTime((new Date()).getTime() + 100000);
+		b.d.getTime().should.not.eql(a.d.getTime());
 	});
 
 	it('RegExp objects', function () {
@@ -75,18 +84,18 @@ describe('deep-extend', function () {
 		var a = { d: new RegExp('b', 'g') };
 		var b = extend({}, a);
 		b.d.test('abc');
-		b.d.lastIndex.should.not.eql( a.d.lastIndex );
+		b.d.lastIndex.should.not.eql(a.d.lastIndex);
 	});
 
 	it('doesn\'t change sources', function () {
-		var a = {a: [1]};
-		var b = {a: [2]};
-		var c = {c: 3};
+		var a = { a: [1] };
+		var b = { a: [2] };
+		var c = { c: 3 };
 		var d = extend({}, a, b, c);
 
-		a.should.eql({a: [1]});
-		b.should.eql({a: [2]});
-		c.should.eql({c: 3});
+		a.should.eql({ a: [1] });
+		b.should.eql({ a: [2] });
+		c.should.eql({ c: 3 });
 	});
 
 	it('example from README.md', function () {
@@ -142,7 +151,7 @@ describe('deep-extend', function () {
 	});
 
 	it('clone arrays instead of extend', function () {
-		extend({a: [1, 2, 3]}, {a: [2, 3]}).should.eql({a: [2, 3]});
+		extend({ a: [1, 2, 3] }, { a: [2, 3] }).should.eql({ a: [2, 3] });
 	});
 
 	it('recursive clone objects and special objects in cloned arrays', function () {
@@ -214,12 +223,12 @@ describe('deep-extend', function () {
 		};
 		A.prototype.z = 3;
 		var foo = new A();
-		extend({x: 123}, foo).should.eql({
+		extend({ x: 123 }, foo).should.eql({
 			x: 1,
 			y: 2
 		});
 		foo.z = 5;
-		extend({x: 123}, foo, {y: 22}).should.eql({
+		extend({ x: 123 }, foo, { y: 22 }).should.eql({
 			x: 1,
 			y: 22,
 			z: 5
