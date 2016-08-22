@@ -5,6 +5,15 @@ var extend = require('../index'); // it must be ./lib/deep-extend.js
 
 describe('deep-extend', function () {
 
+	it('should ignore undefined', function () {
+		var a = { hello: 1 };
+		var b = undefined;
+		extend(a, b);
+		a.should.eql({
+			hello: 1
+		});
+	});
+
 	it('can extend on 1 level', function () {
 		var a = { hello: 1 };
 		var b = { world: 2 };
