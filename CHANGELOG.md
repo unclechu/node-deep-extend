@@ -1,6 +1,11 @@
 Changelog
 =========
 
+v0.4.2
+------
+
+- Fix for `null` as an argument.
+
 v0.4.1
 ------
 
