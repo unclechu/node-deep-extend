@@ -52,12 +52,8 @@
     "mocha": "2.2.1",
     "should": "5.2.0"
   },
-  "directories": {
-    "lib": "./lib/",
-    "test": "./test/"
-  },
   "files": [
-    "lib/deep-extend.js",
-    "index.js"
+    "index.js",
+    "lib/"
   ]
 }
