@@ -42,15 +42,15 @@
   ],
   "main": "lib/deep-extend.js",
   "engines": {
-    "node": ">=0.12.0",
+    "node": ">=0.10.0",
     "iojs": ">=1.0.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
   "devDependencies": {
-    "mocha": "^2.2.1",
-    "should": "^5.2.0"
+    "mocha": "2.2.1",
+    "should": "5.2.0"
   },
   "directories": {
     "lib": "./lib/",
