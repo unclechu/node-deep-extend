@@ -235,4 +235,23 @@ describe('deep-extend', function () {
 		});
 	});
 
+	describe('issue #33', function () {
+
+		it('correct usage (cloning)', function () {
+			var sharedObject = {foo: 'zero'};
+			var objDef = {bar: sharedObject, baz: sharedObject};
+			var obj = {bar: {foo: 'one'}, baz: {foo: 'two'}};
+			obj = extend({}, {bar: objDef.bar, baz: objDef.baz}, obj);
+			obj.should.eql({bar: {foo: 'one'}, baz: {foo: 'two'}});
+		});
+
+		it('incorrect usage (just extending)', function () {
+			var sharedObject = {foo: 'serif'};
+			var objDef = {bar: sharedObject, baz: sharedObject};
+			var obj = {bar: {foo: 'one'}, baz: {foo: 'two'}};
+			obj = extend({bar: objDef.bar, baz: objDef.baz}, obj);
+			obj.should.eql({bar: {foo: 'two'}, baz: {foo: 'two'}});
+		});
+	});
+
 });
