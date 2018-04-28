@@ -254,4 +254,14 @@ describe('deep-extend', function () {
 		});
 	});
 
+	// Vulnerability reported via hacker1: https://hackerone.com/reports/311333
+	// See https://github.com/unclechu/node-deep-extend/issues/39
+	// See https://github.com/unclechu/node-deep-extend/pull/40
+	it('should not modify Object prototype (hacker1 #311333)', function () {
+		var a = {};
+		extend({}, JSON.parse('{"__proto__":{"oops":"It works!"}}'))
+		should.not.exist(a.oops);
+		should.not.exist(Object.prototype.oops);
+	});
+
 });
