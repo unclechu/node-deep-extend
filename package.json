@@ -2,7 +2,7 @@
   "name": "deep-extend",
   "description": "Recursive object extending",
   "license": "MIT",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "https://github.com/unclechu/node-deep-extend",
   "keywords": [
     "deep-extend",
@@ -38,6 +38,10 @@
     {
       "name": "Marshall Bowers",
       "url": "https://github.com/maxdeviant"
+    },
+    {
+      "name": "Misha Wakerman",
+      "url": "https://github.com/mwakerman"
     }
   ],
   "main": "lib/deep-extend.js",

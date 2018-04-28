@@ -1,6 +1,12 @@
 Changelog
 =========
 
+v0.5.1
+------
+
+- Fix prototype pollution vulnerability (thanks to @mwakerman for the PR)
+- Avoid using deprecated Buffer API (thanks to @ChALkeR for the PR)
+
 v0.5.0
 ------
 
