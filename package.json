@@ -2,7 +2,7 @@
   "name": "deep-extend",
   "description": "Recursive object extending",
   "license": "MIT",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "homepage": "https://github.com/unclechu/node-deep-extend",
   "keywords": [
     "deep-extend",
@@ -53,8 +53,8 @@
     "test": "./node_modules/.bin/mocha"
   },
   "devDependencies": {
-    "mocha": "4.1.0",
-    "should": "5.2.0"
+    "mocha": "5.2.0",
+    "should": "13.2.1"
   },
   "files": [
     "index.js",

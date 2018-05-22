@@ -1,10 +1,12 @@
 Changelog
 =========
 
-v0.5.2
+v0.6.0
 ------
 
 - Updated "devDependencies" versions to fix vulnerability alerts
+- Dropped support of io.js and node.js v0.12.x and lower since new versions of
+  "devDependencies" couldn't work with those old node.js versions
 
 v0.5.1
 ------

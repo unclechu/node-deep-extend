@@ -6,13 +6,6 @@ node_js:
   - "6"
   - "5"
   - "4"
-  - "0.12.0"
-  - "0.11.0"
-  - "0.10.0"
-  - "iojs"
-  - "iojs-3"
-  - "iojs-2"
-  - "iojs-1.0.0"
 before_install:
   - npm config set strict-ssl false
   - npm config set registry="http://registry.npmjs.org/"
