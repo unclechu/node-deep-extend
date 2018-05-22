@@ -53,8 +53,8 @@
     "test": "./node_modules/.bin/mocha"
   },
   "devDependencies": {
-    "mocha": "5.2.0",
-    "should": "13.2.1"
+    "mocha": "2.5.3",
+    "should": "5.2.0"
   },
   "files": [
     "index.js",
