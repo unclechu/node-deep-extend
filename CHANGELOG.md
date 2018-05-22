@@ -1,6 +1,11 @@
 Changelog
 =========
 
+v0.5.2
+------
+
+- Updated "devDependencies" versions to fix vulnerability alerts
+
 v0.5.1
 ------
 
